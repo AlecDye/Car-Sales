@@ -32,6 +32,13 @@ const App = props => {
   );
 };
 
-//TODO: put mapStateToProps here
+//! mapStateToProps
+const mapStateToProps = state => {
+  return {
+    additionalPrice: state.additionalPrice,
+    car: state.car,
+    additionalFeatures: state.additionalFeatures
+  }
+}
 
-export default connect(null, {})(App);
+export default connect(mapStateToProps, {})(App);
