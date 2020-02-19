@@ -8,7 +8,7 @@ const AdditionalFeature = props => {
       {/* Add an onClick that will let you add a feature to your car */}
       <button
         className="button"
-        onClick={addFeature({})}
+        onClick={props.addFeature({})}
       >Add</button>
       {props.feature.name} (+{props.feature.price})
     </li>
@@ -18,7 +18,7 @@ const AdditionalFeature = props => {
 const mapStateToProps = state => {
   return {
     state,
-    action: state.addFeature
+    action: addFeature
   }
 }
 

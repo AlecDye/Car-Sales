@@ -7,26 +7,27 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
 
-const App = props => {
-  //* moved state into reducer
+const App = ({ state }) => {
+  console.log("state", state)
+  const { car, additionalPrice, additionalFeatures } = state;
 
-  const removeFeature = item => {
-    // dispatch an action here to remove an item
-  };
+  // const removeFeature = item => {
+  //   // dispatch an action here to remove an item
+  // };
 
-  const buyItem = item => {
-    // dispatch an action here to add an item
-  };
-
+  // const buyItem = item => {
+  //   // dispatch an action here to add an item
+  // };
+  // console.log("app", props)
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={props.car} />
-        <AddedFeatures car={props.car} />
+        <Header car={car} />
+        <AddedFeatures car={car} />
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={props.additionalFeatures} />
-        <Total car={props.car} additionalPrice={props.additionalPrice} />
+        <AdditionalFeatures additionalFeatures={additionalFeatures} />
+        <Total car={car} additionalPrice={additionalPrice} />
       </div>
     </div>
   );
@@ -35,9 +36,10 @@ const App = props => {
 //! mapStateToProps
 const mapStateToProps = state => {
   return {
-    additionalPrice: state.additionalPrice,
-    car: state.car,
-    additionalFeatures: state.additionalFeatures
+    state
+    // additionalPrice: state.additionalPrice,
+    // car: state.car,
+    // additionalFeatures: state.additionalFeatures
   }
 }
 

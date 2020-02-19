@@ -15,7 +15,7 @@ export const initialState = {
     ]
 };
 
-export const firstReducer = (state = initialState, action) => {
+export const addReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_FEATURE':
             return {
