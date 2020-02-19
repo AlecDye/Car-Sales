@@ -32,4 +32,6 @@ const App = props => {
   );
 };
 
+//TODO: put mapStateToProps here
+
 export default connect(null, {})(App);

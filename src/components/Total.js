@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 const Total = props => {
   console.log("Total component", props)
@@ -10,11 +9,4 @@ const Total = props => {
   );
 };
 
-//* update price from additionalPrice when feature is added
-const mapStateToProps = state => {
-  return {
-    price: state.price
-  }
-}
-
-export default connect(mapStateToProps, {})(Total);
+export default Total;
