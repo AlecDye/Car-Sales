@@ -4,13 +4,13 @@ import AddedFeature from './AddedFeature';
 
 
 const AddedFeatures = ({ state }) => {
-  const { car } = state;
+  // console.log("AddedFeatures", state)
   return (
     <div className="content">
       <h6>Added features:</h6>
-      {state.car.features.length ? (
+      {state.addReducer.car.features.length ? (
         <ol type="1">
-          {state.car.features.map(item => (
+          {state.features.map(item => (
             <AddedFeature key={item.id} feature={item} />
           ))}
         </ol>
